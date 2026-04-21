@@ -43,3 +43,19 @@ def view_players(ids, gdpr, days, status):
 
         print(ids[i], acc_type, paid, status[i], alert)
 
+def delete_player(ids, gdpr, days, status):
+    player_id = input("Enter ID to delete: ")
+
+    if player_id in ids:
+        index = ids.index(player_id)
+
+        ids.pop(index)
+        gdpr.pop(index)
+        days.pop(index)
+        status.pop(index)
+
+        print("Player deleted successfully.")
+    else:
+        print("ID not found.")
+
+
