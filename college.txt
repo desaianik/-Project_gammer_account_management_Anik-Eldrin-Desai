@@ -1,0 +1,10 @@
+Name: Anik Eldrin Desai
+Student ID: R00239729
+Course: Modular Programming
+
+Project: Gamer Accounts System
+
+Description:
+This project is a Python program that manages gamer accounts by reading and updating data from a file.
+It allows users to view accounts, add new records, delete existing records, and update account status.
+
