@@ -1,6 +1,4 @@
 # Anik Desai
-from itertools import count
-
 
 def read_file(filename):
     ids = []
