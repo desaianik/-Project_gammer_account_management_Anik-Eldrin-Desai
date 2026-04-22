@@ -113,13 +113,14 @@ def option6(ids,status):
             locked_file.write(ids[i] + "\n")
         elif status[i] == "active":
             active_file.write(ids[i] + "\n")
-            elif status[i] == "disabled":
+        elif status[i] == "disabled":
             disabled_file.write(ids[i] + "\n")
 
     locked_file.close()
     active_file.close()
     disabled_file.close()
     print('file created successfully.')
+
 
 
 
