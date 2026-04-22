@@ -1,4 +1,3 @@
-Gamer Accounts System
 Description
 
 This project is a Python program that manages gamer accounts.
@@ -22,6 +21,5 @@ How to Run
 Open the project in PyCharm
 Run the main Python file
 Follow the menu options displayed
-Author
 
 Anik Desai
