@@ -84,3 +84,15 @@ def update_status(ids, status):
     else:
         print("ID not found.")
 
+def save_file(filename, ids, gdpr, days, status):
+    file = open(filename, "w")
+
+    for i in range(len(ids)):
+        line = ids[i] + "," + gdpr[i] + "," + str(days[i]) + "," + status[i] + "\n"
+        file.write(line)
+
+    file.close()
+
+
+
+
