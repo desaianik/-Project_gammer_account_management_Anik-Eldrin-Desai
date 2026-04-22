@@ -1,4 +1,6 @@
 # Anik Desai
+from itertools import count
+
 
 def read_file(filename):
     ids = []
@@ -121,8 +123,15 @@ def option6(ids,status):
     disabled_file.close()
     print('file created successfully.')
 
+#option7
 
-
+def option7(gdpr, status):
+    count = 0
+    for i in range(len(status)):
+        if gdpr[i] == "No" and status[i] == "active":
+            status[i] ="disabled"
+            count += 1
+    return count
 
 
 def save_file(filename, ids, gdpr, days, status):
