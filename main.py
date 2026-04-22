@@ -70,3 +70,17 @@ def add_player(ids, gdpr, days, status):
         status.append("Active")
 
         print("Player added successfully.")
+
+def update_status(ids, status):
+    player_id = input("Enter ID: ")
+
+    if player_id in ids:
+        index = ids.index(player_id)
+
+        new_status = input("Enter new status: ")
+        status[index] = new_status
+
+        print("Status updated.")
+    else:
+        print("ID not found.")
+
