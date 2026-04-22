@@ -21,7 +21,6 @@ CAS10456,No,198,Active
 How to Run
 Open the project in PyCharm
 Run the main Python file
-Follow the menu options displayed
-Author
+
 
 Anik Desai
