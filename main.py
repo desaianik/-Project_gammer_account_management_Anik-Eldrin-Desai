@@ -90,9 +90,10 @@ def options5(ids):
     casual = 0
     pro = 0
     for player_id in ids:
-        if player_id.stratswith("CAS"):
+        if player_id.startswith("CAS"):
             casual += 1
-        else :
+        else:
+
             pro += 1
     total = len(ids)
 
@@ -154,9 +155,9 @@ def menu():
         print("2. Delete a player")
         print("3. Register new player")
         print("4. Update player status")
-        print("5. Placeholder for Exam")
-        print("6. Placeholder for Exam")
-        print("7. Placeholder for Exam")
+        print("5. count players types")
+        print("6. Export players by status")
+        print("7. Disable unpaid players")
         print("8. Quit and save")
 
         choice = input("Enter choice: ")
@@ -174,13 +175,16 @@ def menu():
             update_status(ids, status)
 
         elif choice == "5":
-            print("Option 5 not implemented yet.")
+            options5(ids)
 
         elif choice == "6":
-            print("Option 6 not implemented yet.")
+            option6(ids, status)
 
         elif choice == "7":
-            print("Option 7 not implemented yet.")
+            update = option7(gdpr, status)
+            print("Account Disabled",update)
+            
+
 
         elif choice == "8":
             save_file(filename, ids, gdpr, days, status)
@@ -188,8 +192,6 @@ def menu():
 
         else:
             print("Invalid choice.")
-
-
 if __name__ == '__main__':
     menu()
 
