@@ -58,4 +58,15 @@ def delete_player(ids, gdpr, days, status):
     else:
         print("ID not found.")
 
+def add_player(ids, gdpr, days, status):
+    player_id = input("Enter new ID: ")
 
+    if player_id in ids:
+        print("ID already exists.")
+    else:
+        ids.append(player_id)
+        gdpr.append("No")
+        days.append(0)
+        status.append("Active")
+
+        print("Player added successfully.")
