@@ -93,6 +93,54 @@ def save_file(filename, ids, gdpr, days, status):
 
     file.close()
 
+def menu():
+    filename = "gamers.txt"
+    ids, gdpr, days, status = read_file(filename)
 
+    choice = ""
+    while choice != "8":
+        print("\nMenu")
+        print("1. View all players")
+        print("2. Delete a player")
+        print("3. Register new player")
+        print("4. Update player status")
+        print("5. Placeholder for Exam")
+        print("6. Placeholder for Exam")
+        print("7. Placeholder for Exam")
+        print("8. Quit and save")
+
+        choice = input("Enter choice: ")
+
+        if choice == "1":
+            view_players(ids, gdpr, days, status)
+
+        elif choice == "2":
+            delete_player(ids, gdpr, days, status)
+
+        elif choice == "3":
+            add_player(ids, gdpr, days, status)
+
+        elif choice == "4":
+            update_status(ids, status)
+
+        elif choice == "5":
+            print("Option 5 not implemented yet.")
+
+        elif choice == "6":
+            print("Option 6 not implemented yet.")
+
+        elif choice == "7":
+            print("Option 7 not implemented yet.")
+
+        elif choice == "8":
+            save_file(filename, ids, gdpr, days, status)
+            print("Data saved. Goodbye.")
+
+        else:
+            print("Invalid choice.")
+
+
+if __name__ == '__main__':
+    menu()
 
 
