@@ -102,6 +102,25 @@ def options5(ids):
         pro_perc = 0
     print("\nCasual players:", casual, f"({casual_perc:.2f}%)")
     print("Pro players:", pro, f"({pro_perc:.2f}%)")
+#option 6
+def option6(ids,status):
+    locked_file = open("locked.txt", "w")
+    active_file = open("active.txt", "w")
+    disabled_file = open("disabled.txt", "w")
+
+    for i in range (len(ids)):
+        if status[i] == "locked":
+            locked_file.write(ids[i] + "\n")
+        elif status[i] == "active":
+            active_file.write(ids[i] + "\n")
+            elif status[i] == "disabled":
+            disabled_file.write(ids[i] + "\n")
+
+    locked_file.close()
+    active_file.close()
+    disabled_file.close()
+    print('file created successfully.')
+
 
 
 
