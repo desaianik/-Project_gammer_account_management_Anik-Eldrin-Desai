@@ -83,6 +83,27 @@ def update_status(ids, status):
         print("Status updated.")
     else:
         print("ID not found.")
+#option 5
+def options5(ids):
+    casual = 0
+    pro = 0
+    for player_id in ids:
+        if player_id.stratswith("CAS"):
+            casual += 1
+        else :
+            pro += 1
+    total = len(ids)
+
+    if total > 0 :
+        casual_perc = (casual/total)*100
+        pro_perc = (pro/total)*100
+    else :
+        casual_perc = 0
+        pro_perc = 0
+    print("\nCasual players:", casual, f"({casual_perc:.2f}%)")
+    print("Pro players:", pro, f"({pro_perc:.2f}%)")
+
+
 
 def save_file(filename, ids, gdpr, days, status):
     file = open(filename, "w")
